@@ -1,8 +1,8 @@
 from pymongo import MongoClient
-from config import MONGO_URI
+from config import DB_URI, DB_NAME
 
-mongo_client = MongoClient(MONGO_URI)
-db = mongo_client["legal_doc_summarizer"]
+mongo_client = MongoClient(DB_URI)
+db = mongo_client.get_database(DB_NAME)
 summaries_collection = db["summaries"]
 
 

@@ -1,11 +1,12 @@
 from google.api_core.client_options import ClientOptions
 from google.cloud import documentai  # type: ignore
+from config import GCP_PROJECT_ID, GCP_LOCATION, GCP_DOCUMENT_AI_PROCESSOR_ID
 
 
 def extract_text_from_document(file_path: str, mime_type: str = "application/pdf") -> str:
-    project_id = "centering-force-431907-n6"
-    location = "us"
-    processor_id = "b57c0b82b05c45d3"
+    project_id = GCP_PROJECT_ID
+    location = GCP_LOCATION
+    processor_id = GCP_DOCUMENT_AI_PROCESSOR_ID
 
     opts = ClientOptions(api_endpoint=f"{location}-documentai.googleapis.com")
 

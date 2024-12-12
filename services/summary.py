@@ -1,6 +1,7 @@
 import google.generativeai as genai
+from config import GEMINI_API_KEY
 
-genai.configure(api_key="AIzaSyC-zF-VYDMtN6i7Y3MiRodQ8DDJV8zCn64")
+genai.configure(api_key=GEMINI_API_KEY)
 
 prompt = """
 
