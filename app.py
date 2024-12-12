@@ -12,8 +12,6 @@ from services.summary import generate_summary
 from services.document import extract_text_from_document
 
 
-load_dotenv()
-
 app = FastAPI()
 
 
