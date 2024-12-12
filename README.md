@@ -6,65 +6,66 @@ The **Legal Document Summarizer** is a Python-based application that allows user
 
 ## Features
 
-- **Document Upload**: Supports PDF and image file formats (JPEG, PNG).
-- **OCR Processing**: Extracts text using Google Cloud Vision API or Document AI.
-- **Summarization**: Generates concise summaries using Gemini 1.5 Pro.
-- **Translation**: Translates summaries into English and Kannada using Google Cloud Translate API.
-- **Data Storage**:
+- **📄 Document Upload**: Supports PDF and image file formats (JPEG, PNG).
+- **🧠 OCR Processing**: Extracts text using Google Cloud Vision API or Document AI.
+- **✂️ Summarization**: Generates concise summaries using Gemini 1.5 Pro.
+- **🌐 Translation**: Translates summaries into English and Kannada using Google Cloud Translate API.
+- **💾 Data Storage**:
   - Stores extracted text and summaries in MongoDB.
   - Stores summary vectors and metadata in Pinecone for efficient similarity-based searches.
-- **API Endpoints**: Exposes RESTful endpoints for document upload and summary retrieval.
+- **🔗 API Endpoints**: Exposes RESTful endpoints for document upload and summary retrieval.
 
 ---
 
 ## Tech Stack
 
-- **Programming Language**: Python
-- **Framework**: FastAPI
-- **APIs**:
+- **🐍 Programming Language**: Python
+- **⚡ Framework**: FastAPI
+- **🛠️ APIs**:
   - Google Cloud Vision API / Document AI for OCR
   - Google Cloud Translate API for translation
-- **Database**: MongoDB
-- **Vector Store**: Pinecone
-- **AI Models**: SentenceTransformer for embeddings
-- **Containerization**: Docker (optional)
+- **🗄️ Database**: MongoDB
+- **🔍 Vector Store**: Pinecone
+- **🤖 AI Models**: SentenceTransformer for embeddings
+- **🐳 Containerization**: Docker (optional)
 
 ---
 
 ## Prerequisites
 
-- Python 3.8 or later
-- MongoDB instance (local or hosted)
-- Google Cloud account with Vision, Translate, and Document AI APIs enabled
-- Pinecone account with API key and environment details
-- `pip` for package management
-- Poppler (for PDF processing with `pdf2image`)
+- **🧰 Requirements**:
+  - Python 3.8 or later
+  - MongoDB instance (local or hosted)
+  - Google Cloud account with Vision, Translate, and Document AI APIs enabled
+  - Pinecone account with API key and environment details
+  - `pip` for package management
+  - Poppler (for PDF processing with `pdf2image`)
 
 ---
 
 ## Installation
 
-### Clone the Repository
+### 📂 Clone the Repository
 
 ```bash
 git clone https://github.com/your-repo/legal-document-summarizer.git
 cd legal-document-summarizer
 ```
 
-### Set Up Virtual Environment
+### 💻 Set Up Virtual Environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows, use `venv\\Scripts\\activate`
 ```
 
-### Install Dependencies
+### 📦 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Set Up Environment Variables
+### 🔑 Set Up Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
 
@@ -79,15 +80,15 @@ PINECONE_ENVIRONMENT=your-pinecone-environment
 
 ## Usage
 
-### Start the Application
+### 🚀 Start the Application
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-### API Endpoints
+### 📡 API Endpoints
 
-#### **Upload Document**
+#### **📤 Upload Document**
 
 - **POST /upload**
 - Request:
@@ -101,7 +102,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
   }
   ```
 
-#### **Retrieve Summary**
+#### **📋 Retrieve Summary**
 
 - **GET /summaries/{timestamp}**
 - Request:
@@ -114,7 +115,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
   }
   ```
 
-#### **List Summaries**
+#### **📚 List Summaries**
 
 - **GET /summaries**
 - Response:
@@ -132,7 +133,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 ## Deployment
 
-### Docker Setup (Optional)
+### 🐳 Docker Setup (Optional)
 
 1. Create a `Dockerfile`:
 
@@ -157,7 +158,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
    docker run -p 8000:8000 legal-document-summarizer
    ```
 
-### Cloud Deployment
+### ☁️ Cloud Deployment
 
 Refer to [Google Cloud Run](https://cloud.google.com/run), [AWS EC2](https://aws.amazon.com/ec2/), or [Heroku](https://www.heroku.com/) for cloud deployment steps.
 
@@ -175,10 +176,10 @@ Refer to [Google Cloud Run](https://cloud.google.com/run), [AWS EC2](https://aws
 
 ## Future Enhancements
 
-- Add support for additional languages.
-- Improve summarization using more advanced AI models.
-- Integrate a frontend for user-friendly document uploads and summary viewing.
-- Implement authentication and user management.
+- 🌍 Add support for additional languages.
+- 🤖 Improve summarization using more advanced AI models.
+- 🖥️ Integrate a frontend for user-friendly document uploads and summary viewing.
+- 🔒 Implement authentication and user management.
 
 ---
 
@@ -190,7 +191,7 @@ This project is licensed under the MIT License.
 
 ## Contributors
 
-- Your Name ([KirPot05](https://github.com/KirPot05))
+- Your Name ([Kiran Potdar](https://github.com/KirPot05))
 - Contributions are welcome! Open a pull request or file an issue to get started.
 
 ---
